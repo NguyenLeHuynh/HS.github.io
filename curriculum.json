@@ -1,0 +1,16 @@
+{
+  "lop1": {
+    "hocky1": {
+      "chuong1": {
+        "ten": "Làm quen số học",
+        "bai": [
+          { "ten":"SGK Toán 1 (PDF)", "link":"<đường dẫn SGK Toán 1 PDF>" }
+        ]
+      }
+    }
+  },
+  "lop5": {
+    "hocky1": { ... },
+    "hocky2": { ... }
+  }
+}
