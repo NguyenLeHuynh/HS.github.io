@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>SGK Toán</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <h1>Sách Giáo Khóa Toán (Lớp 1–5)</h1>
+  <select id="grade" onchange="load()"> 
+    <option value="">Chọn lớp</option>
+    <option value="lop1">Lớp 1</option>
+    …  
+    <option value="lop5">Lớp 5</option>
+  </select>
+  <div id="mat"></div>
+  <script>
+    async function load() {
+      const g = document.getElementById("grade").value;
+      if (!g) return;
+      const r = await fetch(`/api/materials/${g}`);
+      const d = await r.json();
+      let html = '';
+      for (const hk in d) {
+        html += `<h2>Học kỳ ${hk.slice(-1)}</h2>`;
+        for (const ch in d[hk]) {
+          html += `<h3>${d[hk][ch].ten}</h3><ul>`;
+          d[hk][ch].bai.forEach(b => {
+            html += `<li><a href="${b.link}" target="_blank">${b.ten}</a></li>`;
+          });
+          html += `</ul>`;
+        }
+      }
+      document.getElementById("mat").innerHTML = html;
+    }
+  </script>
+</body>
+</html>
