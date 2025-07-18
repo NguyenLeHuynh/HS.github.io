@@ -1,0 +1,28 @@
+body {
+  background-color: #f0f8ff;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #ff4500;
+}
+
+#question-box {
+  background: #fffacd;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+}
