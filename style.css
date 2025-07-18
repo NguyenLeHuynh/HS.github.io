@@ -1,0 +1,4 @@
+body { font-family:sans-serif; text-align:center; padding:20px; }
+#box { display:inline-block; padding:20px; background:#fffbcc; border-radius:8px; }
+input,button { font-size:16px; margin:8px; padding:4px; }
+a { color:#0645ad; }
